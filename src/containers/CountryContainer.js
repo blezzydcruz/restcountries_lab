@@ -6,7 +6,7 @@ const CountryContainer = () => {
     const [visitedCountries, setVisitedCountries] = useState([]);
 
     const loadData = async () => {
-        const response = await fetch("https://restcountries.com/v3.1/all?fields=name,capital,currencies");
+        const response = await fetch("https://restcountries.com/v3.1/all");
         const jsonData = await response.json();
         setCountries(jsonData);
     }
